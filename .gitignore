@@ -1,3 +1,11 @@
+#Archivos
+password.txt
+
+#Carpetas
+db/
+database/
+vendor/
+
 # Logs
 logs
 *.log
