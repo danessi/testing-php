@@ -6,6 +6,10 @@ db/
 database/
 vendor/
 
+#PHPUnit Archivos
+.phpunit.result.cache
+assertEquals
+
 # Logs
 logs
 *.log
