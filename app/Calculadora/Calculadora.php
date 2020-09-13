@@ -2,14 +2,23 @@
 
 namespace App\Calculadora;
 
+Use App\Excepciones\DivisionPorCeroException;
+Use App\Excepciones\ArregloException;
+
 class Calculadora {
     public function sumar($a, $b){
         return $a + $b;
     }
     public function sumarArreglo($arreglo =[]){
-        return array_sum($arreglo);  /* fn suma elem de un array */
+        if (!is_array($arreglo)) {
+            throw new ArregloException();
+        }        
+        return array_sum($arreglo);
     }
     public function dividir($a, $b){
-        return $a / $b; 
+        if ($b === 0) {
+            throw new DivisionPorCeroException();
+        }
+        return $a / $b;
     }
 }
