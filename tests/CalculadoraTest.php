@@ -72,12 +72,18 @@ class CalculadoraTest extends \PHPUnit\Framework\TestCase {
     }
 
     /** @test **/
-    /* Hacer resta  */
-
-
+    public function verificar_que_la_funcion_restar_es_capaz_de_restar_dos_numeros(){
+        $calculadora = new Calculadora;
+        $resta = $calculadora->restar(2,3);
+        $this->assertEquals(-1, $resta);
+    }
 
     /** @test **/
-    /* Hacer multiplicacion */
+    public function verificar_que_la_funcion_multiplicar_es_capaz_de_multiplicar_dos_numeros(){
+        $calculadora = new Calculadora;
+        $multiplicacion = $calculadora->multiplicar(5,4);
+        $this->assertEquals(20, $multiplicacion);
+    }
 
 
 
