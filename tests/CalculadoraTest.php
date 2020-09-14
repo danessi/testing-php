@@ -50,11 +50,35 @@ class CalculadoraTest extends \PHPUnit\Framework\TestCase {
         $this->expectException(ArregloException::class);
         
         $calculadora = new Calculadora;
-
         $suma = $calculadora->sumarArreglo("cadena de texto"); /* ver si el string pasa la prueba */
-        /* $suma = $calculadora->sumarArreglo(4); */  /* ver si el int pasa la prueba */
-        /* $suma = $calculadora->sumarArreglo(NULL); */ /* ver si el null pasa la prueba */
-
     }
+
+    /** @test **/
+    public function comprobar_que_la_funcion_sumar_arreglo_arroja_excepcion_cuando_el_parametro_no_es_un_arreglo_y_es_un_null(){
+        
+        $this->expectException(ArregloException::class);
+        
+        $calculadora = new Calculadora;
+        $suma = $calculadora->sumarArreglo(NULL); /* ver si el null pasa la prueba */
+    }
+
+    /** @test **/
+    public function comprobar_que_la_funcion_sumar_arreglo_arroja_excepcion_cuando_el_parametro_no_es_un_arreglo_y_es_un_int(){
+        
+        $this->expectException(ArregloException::class);
+        
+        $calculadora = new Calculadora;
+        $suma = $calculadora->sumarArreglo(8); /* ver si el int pasa la prueba */
+    }
+
+    /** @test **/
+    /* Hacer resta  */
+
+
+
+    /** @test **/
+    /* Hacer multiplicacion */
+
+
 
 }
